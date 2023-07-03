@@ -1,0 +1,45 @@
+﻿@model List<PeginationCrudDemo.Models.Domian.Product>
+@using PagedList.Mvc;
+@{
+	
+	
+}
+<h1>Proucts List</h1>
+@*<table class="table" >*@
+<table class="table table-striped">
+	<thead>
+		<tr class="table-primary">
+			<th>ProductId</th>
+			<th>ProducName</th>
+			<th>CategoryId</th>
+			<th>CategoryName</th>
+			<th> </th>
+			<th> </th>
+		</tr>
+	</thead>
+	<tbody> 
+		@foreach(var product in Model)
+		{
+			<tr>
+				<td>@product.ProductId</td>
+				<td>@product.ProductName</td>
+				<td>@product.CategoryId</td>
+				<td>@product.CategoryName</td>
+
+
+				<td><a href="Products/View/@product.ProductId"><button type="submit" class="btn btn-info">Update</button></a></td>
+				<td><a href="Products/View/@product.ProductId"><button type="submit" class="btn btn-danger">Delete</button></a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@*<nav aria-label="Page navigation example">
+	<ul class="pagination">
+		<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">Next</a></li>
+	</ul>
+</nav>*@

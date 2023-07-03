@@ -1,0 +1,22 @@
+﻿@model PeginationCrudDemo.Models.AddProductViewModel
+@{
+}
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ProductName</label> 
+        <input type="text" class="form-control" asp-for="ProductName">
+    </div>
+    
+   @* <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">CategoryId</label>
+        <input type="Text" class="form-control" asp-for="CategoryId" readonly>
+    </div>*@
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">CategoryName</label>
+        <input type="text" class="form-control" asp-for="CategoryName">
+
+
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
